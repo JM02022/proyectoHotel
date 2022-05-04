@@ -1,0 +1,75 @@
+<div class="container-md pt-5 pb-5 text-center ">
+    
+    <h3 class="fw-light fs-5">--- Una excelente experiencia y confort ---</h3>
+    <h4 class="fw-light fs-2">NUESTROS HABITACIONES</h4>
+    <br>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers"/>
+            <div class="card-body">
+              <h5 class="card-title">{{habitacionesTop[0].tipoHabitacionH}} </h5>
+              <p class="card-text">
+                Carateristicas: {{habitacionesTop[0].caracteristicas}}
+                <br>
+                Piso: {{habitacionesTop[0].pisoHabitacion}}
+                <br>
+                Precio: {{habitacionesTop[0].precioHabitacion}}
+                <br>
+                Capacidad: {{habitacionesTop[0].capacidad}}
+              </p>
+            </div>
+            <div class="card-footer">
+              <button id ="botton" data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-12 btn btn-primary " style="height:40px;width: 100px; ">
+                <span>Reservar </span><i id="icono" class=""></i>
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+            <div class="card-body">
+              <h5 class="card-title">{{habitacionesTop[1].tipoHabitacionH}}</h5>
+              <p>
+                Carateristicas: {{habitacionesTop[1].caracteristicas}}
+                <br>
+                Piso: {{habitacionesTop[1].pisoHabitacion}}
+                <br>
+                Precio: {{habitacionesTop[1].precioHabitacion}}
+                <br>
+                Capacidad: {{habitacionesTop[1].capacidad}}
+              </p>
+            </div>
+            <div class="card-footer">
+              <button id ="botton" data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-12 btn btn-primary " style="height:40px;width: 100px; ">
+                <span>Reservar </span><i id="icono" class=""></i>
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road"/>
+            <div class="card-body">
+              <h5 class="card-title">{{habitacionesTop[2].tipoHabitacionH}}</h5>
+              <p class="card-text">
+                Carateristicas: {{habitacionesTop[2].caracteristicas}}
+                <br>
+                Piso: {{habitacionesTop[2].pisoHabitacion}}
+                <br>
+                Precio: {{habitacionesTop[2].precioHabitacion}}
+                <br>
+                Capacidad: {{habitacionesTop[2].capacidad}}
+              </p>
+            </div>
+            <div class="card-footer">
+              <button  id ="botton" data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-12 btn btn-primary " style="height:40px;width: 100px; ">
+                <span>Reservar </span><i id="icono" class=""></i>
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<app-modal-registro></app-modal-registro>

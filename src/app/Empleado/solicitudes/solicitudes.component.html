@@ -1,0 +1,37 @@
+<app-nav-empleado></app-nav-empleado>
+<div class="container-fluid" style="padding-top:20px;">
+    <table class="table align-middle mb-0 bg-white table-bordered">
+        <thead class="bg-light">
+          <tr>
+            <th>Cliente</th>
+            <th>Apellidos</th>
+            <th>Correo</th>
+            <th>Numero Celular</th>
+            <th>Fecha Ingreso</th>
+            <th>Fecha Salida</th>
+            <th>Cantidad Personas</th> 
+            <th>Tipo Habitacion</th>
+            <th>Estado Reserva</th>
+            <th>Cambios</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reserva of Solicitudreservas; index as i">
+            <td>{{reserva.nombreCliente}}</td>
+            <td>{{reserva.apellidosCliente}}</td>
+            <td>{{reserva.correoCliente}}</td>
+            <td>{{reserva.numeroCelularCliente}}</td>
+            <td>{{reserva.fechaIngreso}}</td>
+            <td>{{reserva.fechaSalida}}</td>
+            <td>{{reserva.cantidadPersonas}}</td>
+            <td>{{reserva.tipoHabitacion}}</td>
+            <td>{{reserva.Estado}}</td>
+            <td>
+                <button type="button" class="btn btn-success btn-sm" (click)="confirmar(i)">Confirmar</button>
+                <button type="button" class="btn btn-danger btn-sm" style="margin-left: 10px;" (click)="eliminar(i)">Eliminar</button>
+            </td>      
+          </tr>
+        </tbody>
+      </table>
+    
+</div>

@@ -1,0 +1,66 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">SOLICITAR RESERVA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="reserva" (ngSubmit)="solicitarReserva(reserva.value)" class="formRegistro">
+                <div class="mb-4"> 
+                    <label for="nombre"> <i class="bi bi-person-fill "></i> Nombre</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder= "ejm: Maria" required formControlName="nombre">
+                    <div class="nombre text-danger "></div>
+                </div>
+                <div class="mb-4"> 
+                    <label for="apellido"> <i class="bi bi-person-bounding-box "></i> Apellidos</label>
+                    <input type="text" class="form-control" name="apellido" id="apellido" placeholder= "ejm: Vera" required formControlName="apellidos">
+                    <div class="apellido text-danger"></div>
+                </div>
+                <div class="mb-4">
+                    <label for="correo"><i class="bi bi-envelope-fill"></i> Correo</label>
+                    <input type="email" class="form-control" name="correo" id="correo" placeholder= "ejm: Maria@gmail.com" required formControlName="correo"> 
+                    <div class="correo text-danger"></div>
+                    
+                </div>  
+                <div class="mb-4">
+                    <label for="numero"><i class="bi bi-envelope-fill"></i> Numero Celular</label>
+                    <input type="number" class="form-control" name="numero" id="numero" placeholder= "ejm: 999 888 777" required formControlName="numeroCel">
+                    <div class="correo text-danger"></div>
+                    
+                </div> 
+                <div class="mb-4">
+                    <label for="fechaIngreso"><i class="bi bi-envelope-fill"></i> Fecha Ingreso</label>
+                    <input type="date" class="form-control" name="fechaIngreso" id="fechaIngreso"  required formControlName="fechaIngreso">
+                    <div class="fecha text-danger"></div>
+                    
+                </div> 
+                <div class="mb-4">
+                    <label for="fechaSalida"><i class="bi bi-envelope-fill"></i> Fecha Salida</label>
+                    <input type="date" class="form-control" name="fechaSalida" id="fechaSalida"  required formControlName="fechaSalida">
+                    <div class="fecha text-danger"></div>
+                    
+                </div>
+                <div class="mb-4">
+                    <label for="CPersonas"><i class="bi bi-envelope-fill"></i> Cantidad de Personas</label>
+                    <input type="number" class="form-control" name="CPersonas" id="CPersonas" placeholder= "1" required formControlName="cantidadPersonas">
+                    <div class="CPersonastext-danger"></div>              
+                </div> 
+                <div class="mb-4">
+                    <label for="THabitacion"><i class="bi bi-envelope-fill"></i>Tipo Habitacion</label>
+                    <input type="text" disabled class="form-control" name="THabitacion" id="THabitacion" required [value]="tipoHabita">
+                    <div class="CPersonastext-danger"></div> 
+                </div> 
+                <div class="modal-footer">
+                    <button type ="submit" class="col-12 btn btn-primary" style="height:50px;">
+                        RESERVAR
+                    </button>
+                    <button type ="button" class="col-12 btn btn-danger" data-bs-dismiss="modal"style="height:50px;">
+                        CANCELAR
+                    </button>               
+                </div>  
+            </form>
+        </div>
+      </div>
+    </div>
+</div>

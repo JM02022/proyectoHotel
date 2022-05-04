@@ -1,0 +1,12 @@
+<app-nav></app-nav>
+<div class="IMG" style="background-image:url(https://www.hotellimaq.com/wp-content/uploads/2019/06/bg-22.png); width: 100%;
+height: auto; ">
+    <div class=" pt-5 pb-5 text-center">
+        <br><br><br><br><br><br><br><h3 class="fw-light fs-5">--- Conoce ---</h3>
+        <h4 class="fw-light fs-2">LAS HABITACIONES</h4><br><br><br><br><br><br><br><br><br>
+        
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 container-fluid contenedor" style="margin-bottom: 80px; margin-top: 80px;">
+    <app-habitaciones *ngFor="let habitacion of habitaciones" [Habitacion]="habitacion" ></app-habitaciones>
+</div>

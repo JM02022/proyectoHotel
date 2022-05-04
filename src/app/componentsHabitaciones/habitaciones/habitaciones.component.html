@@ -1,0 +1,16 @@
+<div class="card text-center" style="width: 18rem; margin-bottom: 40px;">
+    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/062.webp" class="card-img-top" alt="Chicago Skyscrapers"/>
+    <div class="card-body">
+      <h5 class="card-title">{{Habitacion.tipoHabitacionH}}</h5>
+      <p class="card-text">Caracteristicas: {{Habitacion.caracteristicas}}</p>
+    </div>
+    <ul class="list-group list-group-light list-group-small">
+      <li class="list-group-item px-4">Tipo habitacion: {{Habitacion.tipoHabitacionH}} </li>
+      <li class="list-group-item px-4">Precio habitacion: {{Habitacion.precioHabitacion}}</li>
+      <li class="list-group-item px-4">Capacidad habitacion: {{Habitacion.capacidad}}</li>
+    </ul>
+    <div class="card-body"  >
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Reservar</a>
+    </div>
+</div>  
+<app-modal-registro></app-modal-registro>

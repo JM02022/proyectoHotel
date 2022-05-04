@@ -1,0 +1,81 @@
+<app-nav-empleado></app-nav-empleado>
+<h1 class="text-center" style="padding-top: 30px;">Añadir reservas</h1>
+<div class="container-sm" style="padding-top: 40px;">
+  <form class="row g-3" [formGroup]="reserva" (ngSubmit)="solicitarReserva(reserva.value)">
+    <div class="col-md-4">
+      <label for="validationDefault01" class="form-label">Cliente</label>
+      <input type="text" class="form-control" id="validationDefault01" formControlName="nombre" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Apellidos CLiente</label>
+      <input type="text" class="form-control" id="validationDefault02"  formControlName="apellidos" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault01" class="form-label">Correo</label>
+      <input type="email" class="form-control" id="validationDefault01"  formControlName="correo" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Numero Celular</label>
+      <input type="number" class="form-control" id="validationDefault02" formControlName="numeroCel" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault01" class="form-label">Fecha Ingreso</label>
+      <input type="date" class="form-control" id="validationDefault01"  formControlName="fechaIngreso" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Fecha Salida</label>
+      <input type="date" class="form-control" id="validationDefault02" formControlName="fechaSalida"  required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault01" class="form-label">Cantidad Personas</label>
+      <input type="text" class="form-control" id="validationDefault01" required formControlName="cantidadPersonas" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Tipo Habitacion</label>
+      <input type="text" class="form-control" id="validationDefault02" required formControlName="tipoHabitacion" required>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Agregar Reserva</button>
+    </div>
+  </form>
+</div>
+
+<div class="container-fluid" style="padding-top:20px;">
+    <table class="table align-middle mb-0 bg-white table-bordered">
+        <thead class="bg-light">
+          <tr>
+            <th>Cliente</th>
+            <th>Apellidos</th>
+            <th>Correo</th>
+            <th>Numero Celular</th>
+            <th>Fecha Ingreso</th>
+            <th>Fecha Salida</th>
+            <th>Cantidad Personas</th> 
+            <th>Tipo Habitacion</th>
+            <th>Estado Reserva</th>
+            <th>Pago</th>
+            <th>Cambios</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reserva of Solicitudreservas; index as i">
+            <td>{{reserva.nombreCliente}}</td>
+            <td>{{reserva.apellidosCliente}}</td>
+            <td>{{reserva.correoCliente}}</td>
+            <td>{{reserva.numeroCelularCliente}}</td>
+            <td>{{reserva.fechaIngreso}}</td>
+            <td>{{reserva.fechaSalida}}</td>
+            <td>{{reserva.cantidadPersonas}}</td>
+            <td>{{reserva.tipoHabitacion}}</td>
+            <td>{{reserva.Estado}}</td>
+            <td>{{reserva.pagado}} </td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm" (click)="modificarPago(i)">Modificar</button>
+              <button type="button" class="btn btn-danger btn-sm" style="margin-left: 10px;" (click)="eliminar(i)">Eliminar</button>
+          </td> 
+          </tr>
+    
+        </tbody>
+      </table>
+    
+</div>
